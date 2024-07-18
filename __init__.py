@@ -67,5 +67,5 @@ class ColonThree(breadcord.module.ModuleCog):
         del discord.abc.Messageable._original_send
 
 
-async def setup(bot: breadcord.Bot):
-    await bot.add_cog(ColonThree("colon_three"))
+async def setup(bot: breadcord.Bot, module: breadcord.module.Module) -> None:
+    await bot.add_cog(ColonThree(module.id))
